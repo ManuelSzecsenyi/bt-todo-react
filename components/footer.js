@@ -8,7 +8,7 @@ export const Footer = () => {
                 style={styles.text}
                 placeholderTextColor="#E1E8EB"
                 placeholder="Eine Aufgabe hinzufügen"
-            ></TextInput>
+            />
         </View>
 
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import {View, Image, Text, StyleSheet} from "react-native";
-
+import moment from "moment";
+import 'moment/locale/de'
 
 export const Header = () => {
     return (
@@ -24,7 +25,7 @@ export const Header = () => {
                     }}
                 />
             </View>
-            <Text style={styles.date}>Sa. 13.03.21</Text>
+            <Text style={styles.date}>{moment().locale('de').format('dd. DD.MM.YY')}</Text>
             <Text style={styles.label}>Meine Aufgaben</Text>
 
         </View>

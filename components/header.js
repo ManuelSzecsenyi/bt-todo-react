@@ -4,27 +4,31 @@ import {View, Image, Text, StyleSheet} from "react-native";
 
 export const Header = () => {
     return (
-        <View
-            style={{
-                flexDirection:"row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginTop: 30,
-                marginBottom: 30,
-                marginStart: 10,
-                marginEnd: 10
-            }}
-        >
-            <MenuBtn></MenuBtn>
-            <Text style={styles.text}>ToDo</Text>
-            <Image
-                style={styles.image}
-                source={{
-                    uri: "https://images.unsplash.com/photo-1610832510948-427621807e1b"
+        <View style={{marginStart: 10}}>
+            <View
+                style={{
+                    flexDirection:"row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    marginTop: 30,
+                    marginBottom: 20,
+                    marginEnd: 10
                 }}
-            />
+            >
+                <MenuBtn></MenuBtn>
+                <Text style={styles.text}>ToDo</Text>
+                <Image
+                    style={styles.image}
+                    source={{
+                        uri: "https://images.unsplash.com/photo-1610832510948-427621807e1b"
+                    }}
+                />
+            </View>
+            <Text style={styles.date}>Sa. 13.03.21</Text>
+            <Text style={styles.label}>Meine Aufgaben</Text>
 
         </View>
+
     );
 }
 
@@ -50,7 +54,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 26,
-        fontWeight: "600"
+        fontWeight: "500",
+        fontFamily: 'Roboto-Medium'
     },
     circle: {
         width: 10,
@@ -63,5 +68,17 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         borderRadius: 10000
+    },
+    date: {
+        fontSize: 34,
+        fontWeight: "500",
+        fontFamily: 'Roboto-Medium'
+    },
+    label: {
+        fontSize: 19,
+        fontWeight: "500",
+        fontFamily: 'Roboto-Medium',
+        marginTop: 5,
+        marginBottom: 20
     }
 });

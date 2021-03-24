@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {Header} from "./components/header";
+import {Footer} from "./components/footer";
 
 
 const App: () => Node = () => {
@@ -34,7 +35,7 @@ const App: () => Node = () => {
       <View style={{ flex: 1 }}>
         <Header style={{ flex: 1, backgroundColor: 'powderblue' }}/>
         <View style={{ flex: 2, backgroundColor: 'skyblue' }} />
-        <View style={{ flex: 3, backgroundColor: 'steelblue' }} />
+        <Footer />
       </View>
 
     </SafeAreaView>

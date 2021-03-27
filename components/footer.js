@@ -1,5 +1,5 @@
 import React from "react";
-import {View, TextInput, StyleSheet} from "react-native";
+import {View, TextInput, Image, StyleSheet} from "react-native";
 
 export const Footer = () => {
     return (
@@ -9,8 +9,8 @@ export const Footer = () => {
                 placeholderTextColor="#E1E8EB"
                 placeholder="Eine Aufgabe hinzufügen"
             />
+            <Image source={require("../assets/save-btn.png")} />
         </View>
-
     );
 }
 
@@ -18,6 +18,8 @@ export const Footer = () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         backgroundColor: "#698C99",
         padding: 20,
         borderTopStartRadius: 15,

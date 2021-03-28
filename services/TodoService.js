@@ -9,9 +9,16 @@ const TodoService = {
         } catch (err) {
             console.log(err);
         }
-
-
     },
+
+    createTodo: async function(todo) {
+        try {
+            const resp = await axios.post("http://10.0.2.2:3000/", todo)
+            return resp.data;
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
 
 }

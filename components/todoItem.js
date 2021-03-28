@@ -1,12 +1,12 @@
 import React from "react";
 import {View, Text, Image, StyleSheet} from "react-native";
 
-export const TodoItem = () => {
+export const TodoItem = (props) => {
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require("../assets/item-checked.png")} />
             <Text style={styles.text} >
-                Unterlagen unterschreiben
+                {props.item.text}
             </Text>
         </View>
 

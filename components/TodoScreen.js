@@ -41,15 +41,12 @@ export default class TodoScreen extends Component {
 
     updateTodo = async (todo) => {
         const updatedTodo = todo.done = !todo.done;
-
-        // TODO UPDATE
+        const updatedTodoFromServer = await TodoService.updateTodo(updatedTodo);
 
         const todos = this.state.todoList;
-        todos.map( (ele) => { return ele.id === todo.id ? updatedTodo : ele });
+        todos.map( (ele) => { return ele.id === todo.id ? updatedTodoFromServer : ele });
         this.setState({todoList: todos});
     }
-
-
 
     render() {
         return (

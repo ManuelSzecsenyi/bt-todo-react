@@ -39,6 +39,16 @@ export default class TodoScreen extends Component {
         this.setState({todoList: todos});
     }
 
+    updateTodo = async (todo) => {
+        const updatedTodo = todo.done = !todo.done;
+
+        // TODO UPDATE
+
+        const todos = this.state.todoList;
+        todos.map( (ele) => { return ele.id === todo.id ? updatedTodo : ele });
+        this.setState({todoList: todos});
+    }
+
 
 
     render() {
@@ -49,7 +59,7 @@ export default class TodoScreen extends Component {
                     style={{ flex: 2, }}
                     data={this.state.todoList}
                     renderItem={( {item}) =>
-                        <TouchableWithoutFeedback onPress={ () => this._getTodos()}>
+                        <TouchableWithoutFeedback onPress={ () => this.updateTodo(item)}>
                             <View>
                                 <TodoItem item={item} />
                             </View>

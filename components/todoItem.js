@@ -9,7 +9,6 @@ export const TodoItem = (props) => {
                 {props.item.text}
             </Text>
         </View>
-
     );
 }
 

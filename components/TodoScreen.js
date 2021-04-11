@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {View, TouchableWithoutFeedback, Image, StyleSheet, FlatList} from "react-native";
+import {View, TouchableWithoutFeedback, Image, StyleSheet, FlatList, SafeAreaView} from "react-native";
 import {Header} from "./header";
 import {TodoItem} from "./todoItem";
 import Footer from "./footer";
@@ -51,7 +51,9 @@ export default class TodoScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <Header style={{ flex: 1, backgroundColor: 'powderblue' }}/>
+                <SafeAreaView>
+                    <Header style={{ flex: 1, backgroundColor: 'powderblue' }}/>
+                </SafeAreaView>
                 <FlatList
                     style={{ flex: 2, }}
                     data={this.state.todoList}

@@ -20,9 +20,7 @@ import TodoScreen from "./components/TodoScreen";
 
 const App: () => Node = () => {
   return (
-    <SafeAreaView style={styles.container}>
-        <TodoScreen />
-    </SafeAreaView>
+      <TodoScreen />
   );
 };
 

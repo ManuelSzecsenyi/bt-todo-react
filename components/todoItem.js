@@ -12,7 +12,6 @@ export const TodoItem = (props) => {
     );
 }
 
-
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",

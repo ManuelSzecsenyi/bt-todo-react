@@ -4,7 +4,7 @@ const TodoService = {
 
     getTodos: async function() {
         try {
-            const resp = await axios.get("http://10.0.2.2:3000/")
+            const resp = await axios.get("https://radiant-spire-08360.herokuapp.com/")
             return resp.data;
         } catch (err) {
             console.log(err);
@@ -13,7 +13,7 @@ const TodoService = {
 
     createTodo: async function(todo) {
         try {
-            const resp = await axios.post("http://10.0.2.2:3000/", todo)
+            const resp = await axios.post("https://radiant-spire-08360.herokuapp.com/", todo)
             return resp.data;
         } catch (err) {
             console.log(err);
@@ -22,7 +22,7 @@ const TodoService = {
 
     updateTodo: async function(todo) {
         try {
-            const resp = await axios.put("http://10.0.2.2:3000/", todo)
+            const resp = await axios.put("https://radiant-spire-08360.herokuapp.com/", todo)
             return resp.data;
         } catch (err) {
             console.log(err);

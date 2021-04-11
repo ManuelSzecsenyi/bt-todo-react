@@ -1,0 +1,6 @@
+module Pods_todoReact_todoReactTests {
+  umbrella header "Pods-todoReact-todoReactTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

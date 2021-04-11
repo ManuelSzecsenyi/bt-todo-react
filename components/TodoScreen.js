@@ -51,9 +51,7 @@ export default class TodoScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <SafeAreaView>
-                    <Header style={{ flex: 1, backgroundColor: 'powderblue' }}/>
-                </SafeAreaView>
+                <Header style={{ flex: 1, backgroundColor: 'powderblue' }}/>
                 <FlatList
                     style={{ flex: 2, }}
                     data={this.state.todoList}

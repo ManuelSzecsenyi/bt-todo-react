@@ -32,7 +32,6 @@ export default class Footer extends Component {
                         <Image source={require("../assets/save-btn.png")} />
                     </View>
                 </TouchableWithoutFeedback>
-
             </View>
         )
     };
